@@ -13,114 +13,166 @@
       --accent: #ff7fb2;
       --muted: #7a6b7a;
     }
-    *{box-sizing:border-box}
-    html,body{
-      height:100%;
-      margin:0;
-      font-family:'Nunito',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-      font-size:clamp(14px,1.2vw,18px); /* chữ tự co giãn */
+
+    * {
+      box-sizing: border-box;
     }
-    body{
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      font-size: 16px;
       background: radial-gradient(circle at 10% 20%, var(--bg1), var(--bg2));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:clamp(10px,4vw,30px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
     }
-    .stage{width:100%;max-width:920px}
 
-    .card{
+    .stage {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
       background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
-      border-radius:24px;
-      padding:clamp(16px,4vw,28px);
-      box-shadow:0 10px 30px rgba(250,100,150,0.08);
-      position:relative;
-      overflow:hidden;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(250,100,150,0.08);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
     }
 
-    header{display:flex;gap:clamp(10px,2vw,18px);align-items:center;flex-wrap:wrap}
-    .logo{
-      width:clamp(60px,10vw,86px);
-      height:clamp(60px,10vw,86px);
-      border-radius:18px;
-      flex:0 0 auto;
-      background:linear-gradient(135deg,#fff,#ffeef7);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:4px solid rgba(255,127,178,0.12)
-    }
-    .logo img{width:72px;height:72px;object-fit:contain}
-    h1{font-size:clamp(20px,3vw,28px);margin:0;color:#ff4d93}
-    p.lead{margin:6px 0 0;color:var(--muted);font-weight:600}
-
-    .content{display:flex;gap:22px;margin-top:18px;align-items:flex-start;flex-wrap:wrap}
-    .left{flex:1;min-width:260px}
-    .right{width:220px;flex:1}
-
-    .message{
-      background:var(--card);
-      padding:clamp(14px,3vw,18px);
-      border-radius:14px;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
-      font-size:1em;
-      line-height:1.6;
-      color:#6b435b
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
     }
 
-    .gallery{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;justify-content:center}
-    .gallery img{
-      width:clamp(70px,12vw,84px);
-      height:clamp(70px,12vw,84px);
-      border-radius:12px;
-      object-fit:cover;
-      border:3px solid rgba(255,255,255,0.6)
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      background: linear-gradient(135deg,#fff,#ffeef7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid rgba(255,127,178,0.12);
+      flex-shrink: 0;
     }
 
-    .btns{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-    .btn{
-      background:linear-gradient(90deg,#ff8bb6,#ff6aa4);
-      border:none;
-      padding:clamp(8px,2vw,12px) clamp(12px,3vw,16px);
-      border-radius:12px;
-      color:white;
-      font-weight:700;
-      cursor:pointer;
-      font-size:clamp(13px,2vw,16px);
-    }
-    .btn.secondary{background:transparent;color:#ff4d93;border:2px solid rgba(255,77,147,0.12)}
-
-    .sticker{position:absolute;z-index:2;pointer-events:none;opacity:0.95}
-    .st1{right:12px;top:8px;width:86px}
-    .st2{left:8px;bottom:12px;width:120px}
-    .st3{right:30%;bottom:10px;width:90px}
-
-    .hearts{position:absolute;left:10px;top:10px;width:100%;height:100%;pointer-events:none}
-    .heart{position:absolute;opacity:0;transform:scale(0.6);animation:float 4s infinite}
-    @keyframes float{
-      0%{opacity:0;transform:translateY(0) scale(0.6)}
-      10%{opacity:1}
-      100%{opacity:0;transform:translateY(-180px) scale(1.1)}
+    h1 {
+      font-size: 1.6rem;
+      margin: 0;
+      color: #ff4d93;
     }
 
-    footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:clamp(12px,1.5vw,14px);
-      text-align:center;
+    p.lead {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-weight: 600;
     }
 
-    @media (max-width:640px){
-      .content{flex-direction:column}
-      .right{width:100%}
+    .content {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .message {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 14px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #6b435b;
+      word-wrap: break-word;
+    }
+
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* floating hearts animation */
+    .hearts {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      opacity: 0;
+      transform: scale(0.6);
+      animation: float 6s infinite ease-in-out;
+      font-size: 1.5rem;
+    }
+
+    @keyframes float {
+      0% {opacity: 0; transform: translateY(0) scale(0.6);}
+      10% {opacity: 1;}
+      100% {opacity: 0; transform: translateY(-180px) scale(1.1);}
+    }
+
+    /* 📱 Responsive for mobile */
+    @media (max-width: 640px) {
+      body {
+        padding: 6px;
+        align-items: flex-start;
+      }
+
+      .card {
+        padding: 18px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      p.lead {
+        font-size: 0.95rem;
+      }
+
+      .logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .message {
+        font-size: 0.95rem;
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.1rem;
+      }
+
+      .message {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="stage">
     <div class="card">
-    
-      <div class="hearts" aria-hidden>
+      <div class="hearts" aria-hidden="true">
         <div class="heart" style="left:8%;animation-delay:0s">💖</div>
         <div class="heart" style="left:26%;animation-delay:0.6s">💗</div>
         <div class="heart" style="left:44%;animation-delay:1.2s">💞</div>
@@ -128,9 +180,7 @@
       </div>
 
       <header>
-        <div class="logo">
-          <span style="font-size:clamp(24px,4vw,34px)">🎀</span>
-        </div>
+        <div class="logo"><span style="font-size: 30px;">🎀</span></div>
         <div>
           <h1>Chúc mừng 20/10 — 12A2</h1>
           <p class="lead">Gửi tặng những bông hoa xinh đẹp của 12A2 💕</p>
@@ -138,23 +188,17 @@
       </header>
 
       <div class="content">
-        <div class="left">
-          <div class="message" id="message">
-            <strong>Gửi các bạn nữ lớp 12A2,</strong>
-            <br><br>
-            Nhân ngày 20/10 - ngày Phụ nữ Việt Nam, đám con trai tụi tui muốn gửi đến các bạn nữ 'dễ huông' của A2 🤩 một món quà nho nhỏ (do tụi này dốc sức thực hiện á 😤) nên sẽ rất mong mấy bạn hong chê nha tại dù gì tụi tui cũng bỏ ra nhiều tâm huyết lắm á. Bên cạnh đó thì đám con trai A2 cũng muốn có đôi lời 'tâm sự' muốn nói nè! 🌸
-            <br><br>
-            Thật khó tin là thời gian trôi nhanh đến vậy. Mới ngày nào còn rụt rè, ngại ngùng trong những buổi học đầu tiên của năm lớp 10, vậy mà giờ đây chúng ta – những học sinh lớp 12A2 – lại đang đứng trước ngưỡng cửa chia xa. Nhìn lại chặng đường hai năm qua, t cảm thấy vừa biết ơn, vừa bùi ngùi. Cảm ơn các bạn nữ A2 – những người đã luôn là điểm sáng của lớp, là nguồn năng lượng tích cực, là nụ cười khiến những ngày mệt mỏi cũng trở nên nhẹ nhàng hơn. Cảm ơn vì đã đồng hành, vì những lần cùng nhau học bài, tám chuyện, cười vang cả lớp, và cả những lúc lặng im nhưng vẫn hiểu nhau.
-            <br><br>
-            Giờ đây, khi mỗi người sắp phải bước sang một hành trình mới, t chỉ mong rằng các bạn – những bông hoa A2 rực rỡ – sẽ luôn giữ trong tim sự tự tin, dịu dàng và bản lĩnh của mình. Dù mai này có ở đâu, làm gì, hy vọng các bạn vẫn luôn tỏa sáng theo cách riêng, như những đóa hoa chẳng bao giờ tàn trong ký ức của chúng ta.
-            <br><br>
-          </div>
+        <div class="message" id="message">
+          <strong>Gửi các bạn nữ lớp 12A2,</strong><br><br>
+          Nhân ngày 20/10 - ngày Phụ nữ Việt Nam, đám con trai tụi tui muốn gửi đến các bạn nữ 'dễ huông' của A2 🤩 một món quà nho nhỏ (do tụi này dốc sức thực hiện á 😤) nên sẽ rất mong mấy bạn hong chê nha tại dù gì tụi tui cũng bỏ ra nhiều tâm huyết lắm á. Bên cạnh đó thì đám con trai A2 cũng muốn có đôi lời 'tâm sự' muốn nói nè! 🌸
+          <br><br>
+          Thật khó tin là thời gian trôi nhanh đến vậy. Mới ngày nào còn rụt rè, ngại ngùng trong những buổi học đầu tiên của năm lớp 10, vậy mà giờ đây chúng ta – những học sinh lớp 12A2 – lại đang đứng trước ngưỡng cửa chia xa. Nhìn lại chặng đường hai năm qua, t cảm thấy vừa biết ơn, vừa bùi ngùi. Cảm ơn các bạn nữ A2 – những người đã luôn là điểm sáng của lớp, là nguồn năng lượng tích cực, là nụ cười khiến những ngày mệt mỏi cũng trở nên nhẹ nhàng hơn. Cảm ơn vì đã đồng hành, vì những lần cùng nhau học bài, tám chuyện, cười vang cả lớp, và cả những lúc lặng im nhưng vẫn hiểu nhau.
+          <br><br>
+          Giờ đây, khi mỗi người sắp phải bước sang một hành trình mới, t chỉ mong rằng các bạn – những bông hoa A2 rực rỡ – sẽ luôn giữ trong tim sự tự tin, dịu dàng và bản lĩnh của mình. Dù mai này có ở đâu, làm gì, hy vọng các bạn vẫn luôn tỏa sáng theo cách riêng, như những đóa hoa chẳng bao giờ tàn trong ký ức của chúng ta.
         </div>
       </div>
 
-      <footer>
-        From Moi and the bees 🐝
-      </footer>
+      <footer>From Moi and the bees 🐝</footer>
     </div>
   </div>
 </body>
