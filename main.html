@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chúc 20/10 — Lớp 12A2 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #fff1f6;
+      --bg2: #fff7fb;
+      --card: #ffffffcc;
+      --accent: #ff7fb2;
+      --muted: #7a6b7a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Nunito',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{
+      background: radial-gradient(circle at 10% 20%, var(--bg1), var(--bg2));
+      display:flex;align-items:center;justify-content:center;padding:20px;
+    }
+    .stage{width:100%;max-width:920px}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+      border-radius:24px;padding:28px;box-shadow:0 10px 30px rgba(250,100,150,0.08);position:relative;overflow:hidden;
+    }
+
+    header{display:flex;gap:18px;align-items:center}
+    .logo{
+      width:86px;height:86px;border-radius:18px;flex:0 0 86px;background:linear-gradient(135deg,#fff,#ffeef7);display:flex;align-items:center;justify-content:center;border:4px solid rgba(255,127,178,0.12)
+    }
+    .logo img{width:72px;height:72px;object-fit:contain}
+    h1{font-size:28px;margin:0;color:#ff4d93}
+    p.lead{margin:6px 0 0;color:var(--muted);font-weight:600}
+
+    .content{display:flex;gap:22px;margin-top:18px;align-items:flex-start}
+    .left{flex:1}
+    .right{width:220px}
+
+    .message{
+      background:var(--card);padding:18px;border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+      font-size:16px;line-height:1.5;color:#6b435b
+    }
+
+    .gallery{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .gallery img{width:84px;height:84px;border-radius:12px;object-fit:cover;border:3px solid rgba(255,255,255,0.6)}
+
+    .btns{margin-top:14px;display:flex;gap:10px}
+    .btn{background:linear-gradient(90deg,#ff8bb6,#ff6aa4);border:none;padding:10px 14px;border-radius:12px;color:white;font-weight:700;cursor:pointer}
+    .btn.secondary{background:transparent;color:#ff4d93;border:2px solid rgba(255,77,147,0.12)}
+
+    /* floating stickers */
+    .sticker{position:absolute;z-index:2;pointer-events:none;opacity:0.95}
+    .st1{right:12px;top:8px;width:86px}
+    .st2{left:8px;bottom:12px;width:120px}
+    .st3{right:30%;bottom:10px;width:90px}
+
+    /* cute hearts animation */
+    .hearts{position:absolute;left:10px;top:10px;width:100%;height:100%;pointer-events:none}
+    .heart{position:absolute;opacity:0;transform:scale(0.6);animation:float 4s infinite}
+    @keyframes float{
+      0%{opacity:0;transform:translateY(0) scale(0.6)}
+      10%{opacity:1}
+      100%{opacity:0;transform:translateY(-180px) scale(1.1)}
+    }
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:640px){
+      .content{flex-direction:column}
+      .right{width:100%}
+      .logo{width:68px;height:68px}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="card">
+    
+      <div class="hearts" aria-hidden>
+        <div class="heart" style="left:8%;animation-delay:0s">💖</div>
+        <div class="heart" style="left:26%;animation-delay:0.6s">💗</div>
+        <div class="heart" style="left:44%;animation-delay:1.2s">💞</div>
+        <div class="heart" style="left:68%;animation-delay:0.9s">💕</div>
+      </div>
+
+      <header>
+        <div class="logo">
+        
+          <span style="font-size:34px">🎀</span>
+        </div>
+        <div>
+          <h1>Chúc mừng 20/10 — 12A2</h1>
+          <p class="lead">Gửi tặng những bông hoa xinh đẹp của 12A2 💕</p>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="left">
+          <div class="message" id="message">
+            <strong>Gửi các bạn nữ lớp 12A2,</strong>
+            <br><br>
+            Nhân ngày 20/10 - ngày Phụ nữ Việt Nam, đám con trai tụi tui muốn gửi đến các bạn nữ 'dễ huông' của A2 🤩 một món quà nho nhỏ (do tụi này dốc sức thực hiện á 😤) nên sẽ rất mong mấy bạn hong chê nha tại dù gì tụi tui cũng bỏ ra nhiều tâm huyết lắm á. Bên cạnh đó thì đám con trai A2 cũng muốn có đôi lời 'tâm sự' muốn nói nè! 🌸
+            <br><br>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        From Moi and the bees 🐝
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
